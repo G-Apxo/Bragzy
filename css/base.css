@@ -10132,12 +10132,21 @@ fieldset:disabled .btn {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
   }
-  
+  .container_scroll__custom{
+    max-height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
   .panel {
     scroll-snap-align: start;
     height: 100vh;
   }
-  
+  .panel__inside__scroll {
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
   .red {
     background-color: #cf3535;
     background-image: none;
