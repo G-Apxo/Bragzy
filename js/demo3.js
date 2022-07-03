@@ -2,8 +2,6 @@ var canvas = document.querySelector('#scene');
 var width = canvas.offsetWidth,
     height = canvas.offsetHeight;
 
-var setBKGimg = new THREE.TextureLoader().load('img/bkgimg.svg')
-
 var renderer = new THREE.WebGLRenderer({
     canvas: canvas,
     antialias: true
@@ -15,7 +13,6 @@ renderer.setSize(width, height);
 
 var scene = new THREE.Scene();
 // setting bkg image
-scene.background = setBKGimg;
 
 var camera = new THREE.PerspectiveCamera(100, width / height, 0.1, 10000);
 camera.position.set(120, 0, 300);
@@ -90,3 +87,5 @@ window.addEventListener("resize", function(){
     resizeTm = clearTimeout(resizeTm);
     resizeTm = setTimeout(onResize, 200);
 });
+
+
